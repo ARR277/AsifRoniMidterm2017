@@ -1,5 +1,6 @@
 package math;
 
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
@@ -12,7 +13,19 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+	    	primeList(2, 1000000);
+    	
+	}
 
+	private static void primeList(int num1, int num2) {
+		// TODO Auto-generated method stub
+		for(int i=num1; i<=num2; i++){
+			int pair = 0;
+			for(int j=i; j>0; j--){
+				if(i%j==0)pair++;
+			}
+			if(pair==2) System.out.println(i);
+		}
 	}
 
 }

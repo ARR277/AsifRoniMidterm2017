@@ -1,31 +1,208 @@
 Please answer the below Data Structure Questions:
 
-why do we need data structure?
-List out the areas in which data structures are applied extensively?
-what is an Array?
-what is the difference between the Array and ArrayList?
-what is LinkedList?
-what is queue?
-what is stack?
-what is FIFO and LIFO?
-what is the order of complexity?
-what is the best case to search an element from an array?
-what is the worst case to search an element from an array?
-what is tree in data structure?
-what is graph in data structure?
-what is the difference between the HashTable and HashMap?
-What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
-How HashMap works in java?
-What is ArrayIndexOutOfBoundsException in java? When it occurs?
-What are the different ways of copying an array into another array?
-What is difference between an array and a linked list?
-What is DFS and BFS?
-What is Recursion?
-What is Big-(O)-notation?
-Outlined different kind of sorting algorithm with time complexity?
+	why do we need data structure?
+	
+	Answer:		It is a particular way of storing and organizing information in a computer so that it can be retrieved and used most
+				productively.
+					- Data structures are used in almost every program or software system.
+					- Specific data structures are essential ingredients of many efficient algorithms, and make possible the
+					  management of huge amounts of data, such as large integrated collection of databases.
+					- Some programming languages emphasize data structures, rather than algorithms, as the key organizing factor
+					  in software design.
+					  
+	List out the areas in which data structures are applied extensively?
+	
+	Answer:		-Compiler Design
+				-Operating System
+				-Database Management System
+				-Statistical analysis package
+				-Numerical Analysis
+				-Graphics
+				-Artificial Intelligence
+				-Simulation
+				
+	what is an Array?
 
-Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
-  a)In terms of Accessing element.
-  b)In terms of Inserting element.
-  c)In terms of Searching element.
-  d)In terms of Removing element.
+	Answer:		A container object that holds a fixed number of values of a single type. The length of an array is established when
+				the array is created. After creation, its length is fixed.
+
+	what is the difference between the Array and ArrayList?
+
+	Answer:		- Array is both primitive data types as well as objects of a class with simply fixed sized and its members can be
+				  accessed using [].
+				- ArrayList is part of collection framework in Java with dynamic sized which only supports object entries but not
+				  the primitive data types.       
+
+	what is LinkedList?
+
+	Answer: 	A sequence of data structures which are connected together via links. It is a sequence of links which contains items.
+				Each link contains a connection to another link.
+	
+	what is stack?
+
+	Answer: 	an abstract data structure, that behaves like a real-world stack. This feature makes it LIFO data structure.
+				The element which is placed for insertion (push) and for removal (pop) on the top of the stack, is accessed first.
+
+	what is queue?
+	
+	Answer: 	An abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. This
+				feature makes it FIFO data structure. One end is always used to insert data (enqueue) and the other is used to
+				remove data (dequeue).
+	
+	what is FIFO and LIFO?
+	
+	Answer:		- In FIFO, First-In-First-Out, it is much like stack where adding new elements is placed at the top whereas deleting
+				  elements is removed at the bottom of the stack.
+				- In LIFO, Last-In-First_Out, much is similar to FIFO but both adding and deleting elements is done only at the top of
+				  the stack.
+	
+	what is the order of complexity?
+	
+	Answer: 	An intuitive definition could define the "order" of the program as the relation between the input size and the
+				execution time. Big-O analysis is a form of runtime analysis that measures the efficiency of an algorithm in terms
+				of the time it takes for the algorithm to run as a function of the input size.
+	
+	what is the best case to search an element from an array?
+	
+	Answer:		O(n)
+	
+	what is the worst case to search an element from an array?
+	
+	Answer:		O(n)
+	
+	what is tree in data structure?
+	
+	Answer:		A special data structure used for data storage purposes. A binary tree has a special condition that each node can have
+				a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as
+				quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
+
+	what is graph in data structure?
+	
+	Answer:		A pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected
+				objects are represented by points termed as vertices, and the links that connect the vertices are called edges.
+	
+	what is the difference between the HashTable and HashMap?
+	
+	Answer:		- HashTable is synchronized whereas HashMap is not.
+				- Another difference is that iterator in the HashMap is fail-safe while the enumerator for the HashTable isn't.
+				- HashMap permits null values in it, while HashTable doesn't.
+	
+	What are the major data structures used in the following areas : RDBMS, Network data model, and Hierarchical data model.
+
+	Answer:		- RDBMS:
+					Array
+				- Network data model:
+					Graph
+				- Hierarchical data model:
+					Tree
+
+	How HashMap works in java?
+
+	Answer:		It works based on hashing principle. Hashing is the mechanism of assigning unique code to a variable or attribute
+				using an algorithm to enable easy retrieval. A true hashing mechanism should always return the same hashCode() when
+				it is applied to the same object. Hash functions are used to link key and value in HashMap. Objects are stored by
+				calling put(key, value) method of HashMap and retrieved by calling get(key) and get(value) method. It is a data structure which
+				allows us to store object and retrieve it in constant time O(1) provided we know the key. 
+
+	What is ArrayIndexOutOfBoundsException in java? When it occurs?
+	
+	Answer:		It is thrown to indicate that an array has been accessed with an illegal index. The index is either negative or
+				greater than or equal to the size of the array. It occurs at the runtime when exception is unchecked, otherwise
+				compile time when exception is checked.
+	
+	What are the different ways of copying an array into another array?
+	
+	Answer:		For example, String [] arr1 has been declared and initialize with five elements and String [] arr2 is only been declared.
+				To copy an array into another array e.g. copy arr1 to arr2, you can either:
+				- copy the reference value by its expression.
+					+-------------------+
+					|	arr2 = arr1;	|
+					+-------------------+
+				- allocate the capacity of the new array and run either a for loop or while loop to copy arr2 from arr1.
+					+-------------------------------------------+-------------------------------------------+
+					|	int i=0;  arr2 = new int[arr1.length];	|	int i = 0;  arr2 = new int[arr1.length];|
+					|	for(i=0; i<arr1.length; i++)			|	while(i<arr1.length)					|
+					|		arr2[i] = arr1[i];					|		arr2[i] = arr1[i];					|
+					+-------------------------------------------+-------------------------------------------+
+				- use the System library to set the source of the array, arr1, to be copied into the destination array, arr2 with
+				  specific parameter --> System.arraycopy(source, sourceStartIndex, destination, destinationStartIndex, Length)
+					+-------------------------------------------------------+
+					|	System.arraycopy(arr1, 0, arr2, 0, arr1.length);	|
+					+-------------------------------------------------------+
+					
+	What is difference between an array and a linked list?
+	
+	Answer:		- Array size is fixed and LinkedList size is dynamic.
+					- In array, memory is allocated at compile time i.e. Static Memory Allocation.
+					  The elements are stored in consecutive manner in memory.
+						- Arrays are linear data structures.
+						- Array has homogenous values.
+						- Array elements can be modified easily by identifying the index value
+						- Array elements can not be added, deleted once it is declared. Insertion & deletion takes more time in array
+						  as elements are stored in consecutive memory locations.
+					- In linked list, memory is allocated at run time i.e. Dynamic Memory Allocation.
+					  The elements can be stored at any available place as address of node is stored in previous node.
+						- Linked lists are linear and non-linear data structures.
+						- Linked lists are linear for accessing, and non-linear for storing in memory.
+						- It is a complex process for modifying the node in a linked list.
+						- The nodes in the linked list can be added and deleted from the list. Insertion & deletion are fast & easy
+						  in linked list as only value of pointer is needed to change.
+							
+	What is DFS and BFS?
+	
+	Answer:		- DFS, Depth First Search, is an algorithm that traverses a graph in a depth-ward motion and uses a stack to remember
+				  to get the next vertex to start a search, when a dead end occurs in any iteration.
+				- BDS, Breadth First Search, is an algorithm that traverses a graph in a breadth-ward motion and uses a queue to
+				  remember to get the next vertex to start a search, when a dead end occurs in any iteration.
+				  
+	What is Recursion?
+	
+	Answer:		It is a basic programming technique you can use in Java, in which a method calls itself to solve some problem.
+				In recursion, the function A either calls itself directly or calls a function B that in turn calls the original
+				function A.
+
+	What is Big-(O)-notation?
+	
+	Answer:		Big O notation is used to describe the performance or complexity of an algorithm. Big O specifically describes the
+				worst-case scenario, and can be used to describe the execution time required or the space used by an algorithm.
+
+	Outlined different kind of sorting algorithm with time complexity?
+	
+	Answer:
+				In best case scenario:		|	In average case scenario:		|	In worst case scenario:	
+					- O(n):					|		- O(n+k)					|		- O(n^2)		
+						- Bubble Sort		|			- Bucket Sort			|			- Bubble Sort
+						- Insertion Sort	|		- O(n^2):					|			- Bucket Sort
+						- Selection Sort	|			- Bubble Sort			|			- Insertion Sort
+					- O(n+k)				|			- Insertion Sort		|			- Quick Sort
+						- Bucket Sort		|			- Selection Sort		|			- Selection Sort
+					- O(n log n):			|		- O(n log n):				|		- O(n log n):
+						- Heap Sort			|			- Heap Sort				|			- Heap Sort
+						- Merge Sort		|			- Merge Sort			|			- Merge Sort
+						- Quick Sort		|			- Quick Sort			|		- O( (n log n)^2 ):
+						- Shell Sort		|		- O( (n log n)^2 ):			|			- Shell Sort
+											|			- Shell Sort			|
+
+	Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
+ 		a)In terms of Accessing element.	(Access)
+		b)In terms of Inserting element.	(Insert)
+		c)In terms of Searching element.	(Search)
+		d)In terms of Removing element.		(Remove)
+  
+	+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+	|						|														 TIME COMPLEXITY														|
+	|						+---------------------------------------------------------------+---------------------------------------------------------------+
+	|	DATA STRUCTURE		|							 AVERAGE							|							  WORST								|
+	|						+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+	
+	|						|	Access		|	Insert		|	Search		|	Remove		|	Access		|	Search		|	Insert		|	Remove		|
+	+-----------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+	|	Arrays				|	O(1)		|	O(n)		|	O(n)		|	O(n)		|	O(1)		|	O(n)		|	O(n)		|	O(n)		|
+	|	ArrayList			|	O(1)		|	O(n)		|	O(n)		|	N/A			|	O(1)		|	O(n)		|	O(n)		|	N/A			|
+	|	Binary Search Tree	|	N/A			|	O(log n)	|	O(log n)	|	O(log n)	|	N/A			|	O(n)		|	O(n)		|	O(n)		|
+	|	LinkedList			|	O(n)		|	O(n)		|	O(1)		|	O(1)		|	O(n)		|	O(n)		|	O(1)		|	O(1)		|
+	|	Double LinkedList	|	O(n)		|	O(n)		|	O(1)		|	O(1)		|	O(n)		|	O(n)		|	O(1)		|	O(1)		|
+	|	Hash Table			|	N/A			|	O(1)		|	O(1)		|	O(1)		|	N/A			|	O(n)		|	O(n)		|	O(n)		|
+	|	Stack				|	O(n)		|	O(n)		|	O(1)		|	O(1)		|	O(n)		|	O(n)		|	O(1)		|	O(1)		|
+	|	Queue				|	O(n)		|	O(n)		|	O(1)		|	O(1)		|	O(n)		|	O(n)		|	O(1)		|	O(1)		|
+	+-----------------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+	

@@ -1,9 +1,8 @@
 package math;
 
-import databases.ConnectDB;
-
-import java.util.ArrayList;
-import java.util.List;
+//import databases.ConnectDB;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class LowestNumber {
 
@@ -14,8 +13,8 @@ public class LowestNumber {
 		 */
 		int  array[] = new int[]{211,110,99,34,67,89,67,456,321,456,78,90,45,32,56,78,90,54,32,123,67,5,679,54,32,65};
 
-		ConnectDB connectDB = new ConnectDB();
-
+		//ConnectDB connectDB = new ConnectDB();
+/*
 		List<String> lowestValue = new ArrayList<String>();
 		try {
 			connectDB.InsertDataFromArryToMySql(array, "tbl_lowestNumber", "column_lowestNumber");
@@ -28,6 +27,17 @@ public class LowestNumber {
 		for(String st:lowestValue){
 			System.out.println(st);
 		}
+*/
+		int lowestIndex = 0;
+		System.out.print("The list of the array:\n[");
+		for(int print: array){
+			System.out.print(" "+print);
+		}
+		System.out.println(" ]");
+		for(int i=1; i<array.length; i++){
+			if( array[lowestIndex] > array[i] ) lowestIndex = i;
+		}
+		System.out.println("\nThe lowest number from the list is "+array[lowestIndex]);
 	}
 
 }
