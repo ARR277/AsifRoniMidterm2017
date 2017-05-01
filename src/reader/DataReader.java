@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 
 public class DataReader {
 
-//	final static String FILENAME = "C:\\Users\\User\\Desktop\\text.txt";
+//	final static String FILENAME = "C:\\Users\\User\\Desktop\\text";
 	public static void main(String[] args) {
 		/*
 		 * User API to read the below textFile and print to console.
